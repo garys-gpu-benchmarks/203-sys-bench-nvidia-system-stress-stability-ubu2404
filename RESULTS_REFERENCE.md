@@ -3,23 +3,23 @@
 **Main goal:** Analyze GPU thermal and power behavior under combined CPU and GPU load  
 **Tools:** Run stress-ng --cpu --cpu-load, bin/gpu_stress (cuBLAS GEMM), and nvidia-smi --query-gpu
 
-Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_141 · recorded 2026-11-14). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
+Reference results measured by the maintainer on the system shown in each section (generator TEMPLATE_00_142 · recorded 2026-11-16). Your own runs write `results/RESULTS_ACTUAL.md` in the same format.
 
 > Smoke runs use deliberately small sizes. They check that the workload installs and runs end to end; their numbers are not performance results. Baseline and extended are.
 
 <!-- profile:smoke -->
 ## smoke
 
-- **System:** 1× NVIDIA H100 PCIe (81559 MiB) · Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz · Ubuntu 24.04.5 LTS · kernel 6.8.0-138-generic · driver 595.91.07
-- **Run:** 2026-11-14T10:49:04Z · status **PASS** (exit 0)
-- **Time (mm:ss):** setup 01:05 · benchmark 00:10 · whole run 01:23
-- **Source:** run 203_20261114_104904
+- **System:** 1× NVIDIA H100 NVL (95830 MiB) · Intel(R) Xeon(R) Platinum 8452Y · Ubuntu 24.04.5 LTS · kernel 6.8.0-138-generic · driver 595.91.07
+- **Run:** 2026-11-16T10:56:18Z · status **PASS** (exit 0)
+- **Time (mm:ss):** setup 00:59 · benchmark 00:10 · whole run 01:14
+- **Source:** run 203_20261116_105618
 - **Command:** `bash run_benchmark.sh --smoke --num-threads 16 --cpu-load-percent 50 --gpu-load-percent 50 --temp-threshold 85 --power-threshold 700 --duration 5 --poll-interval 1`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | Peak GPU temperature (peak_gpu_temperature_c) | 52.0 |
-| 2 | Sustained GPU power (sustained_gpu_power_w) | 216.718 |
+| 1 | Peak GPU temperature (peak_gpu_temperature_c) | 41.0 |
+| 2 | Sustained GPU power (sustained_gpu_power_w) | 230.854 |
 | 3 | GPU ECC error count (gpu_system_ecc_error_count) | 0.0 |
 | 4 | Thermal throttle events (thermal_throttle_event_count) | 0.0 |
 <!-- /profile:smoke -->
