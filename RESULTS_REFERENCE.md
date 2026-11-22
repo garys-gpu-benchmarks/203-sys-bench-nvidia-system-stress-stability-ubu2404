@@ -11,15 +11,15 @@ Reference results from the validation run on the system shown in each section (r
 ## smoke
 
 - **System:** 1× NVIDIA H100 80GB HBM3 (81559 MiB) · Intel(R) Xeon(R) Platinum 8470 · Ubuntu 24.04.5 LTS · kernel 6.8.0-149-generic · driver 595.112.07
-- **Run:** 2026-11-22T10:40:29Z · status **PASS** (exit 0)
+- **Run:** 2026-11-22T14:00:13Z · status **PASS** (exit 0)
 - **Time (mm:ss):** setup 00:36 · benchmark 00:09 · whole run 00:50
-- **Source:** run 203_20261122_104029
+- **Source:** run 203_20261122_140013
 - **Command:** `bash run_benchmark.sh --smoke --num-threads 16 --cpu-load-percent 50 --gpu-load-percent 50 --temp-threshold 85 --power-threshold 700 --duration 5 --poll-interval 1`
 
 | # | Metric | Result |
 |---|---|---|
-| 1 | Peak GPU temperature (peak_gpu_temperature_c) | 42.0 |
-| 2 | Sustained GPU power (sustained_gpu_power_w) | 428.108 |
+| 1 | Peak GPU temperature (peak_gpu_temperature_c) | 78.0 |
+| 2 | Sustained GPU power (sustained_gpu_power_w) | 433.55 |
 | 3 | GPU ECC error count (gpu_system_ecc_error_count) | 0.0 |
 | 4 | Thermal throttle events (thermal_throttle_event_count) | 0.0 |
 <!-- /profile:smoke -->
